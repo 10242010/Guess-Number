@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="guess-number.css">
+    <script src="guess-number.js"></script>
+    <title>Guess Number Game</title>
+</head>
+<body class="grad">
+    <style>
+        body {
+          background-color: black;
+          font-family: cursive;
+        }
+        
+        .glow {
+          font-size: 80px;
+          color: #fff;
+          text-align: center;
+          animation: glow 1s ease-in-out infinite alternate;
+        }
+        
+        @-webkit-keyframes glow {
+          from {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #003285, 0 0 40px #003285, 0 0 50px #003285, 0 0 60px #003285, 0 0 70px #003285;
+          }
+          
+          to {
+            text-shadow: 0 0 20px #fff, 0 0 30px #2A629A, 0 0 40px #2A629A, 0 0 50px #2A629A, 0 0 60px #2A629A, 0 0 70px #2A629A, 0 0 80px #2A629A;
+          }
+        }
+        </style>
+        
+        <h1 class="glow">Guess The Number</h1>
+
+  <p class="test">Try to guess the random number from 1-100 in 10 turns or fewer! We'll tell you if your guess was too high or too low. Good luck!</p>
+
+  <div class="form">
+    <label for="guessField" class="test">Enter a guess: </label>
+    <input type="number" min="1" max="100" required id="guessField" class="guessField">
+    <input type="submit" value="Submit guess" class="guessSubmit" onclick="checkGuess()">
+  </div>
+
+  </body>
+</html>
